@@ -1,23 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>MyPortfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    Header Content
-    <header></header>
-    
-    Main
-    <Main></Main>
 
-    Footer
-    <footer></footer>
+    <!-- Popup Nama -->
+<div class="popup" id="namePopup">
+    <div class="popup-content">
+        <h2>Selamat Datang</h2>
+        <p>Silahkan masukkan nama Anda</p>
+        <input type="text" id="userNameInput" placeholder="Nama Anda">
+        <button onclick="saveName()">Masuk</button>
+    </div>
+</div>
 
-    Java Script External
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">My<span>Portfolio</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Our Profile</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Message Us</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 id="welcomeText">Hai, 👋</h1>
+            <p>Web Developer | UI Designer | Programmer</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="section">
+        <h2>Our Profile</h2>
+        <p>
+            Saya adalah seorang web developer yang fokus pada pembuatan
+            website modern, responsive, dan user-friendly.
+        </p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section bg-light">
+        <h2>My Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>Website Company Profile</p>
+            </div>
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>Aplikasi Todo List</p>
+            </div>
+            <div class="card">
+                <h3>Project 3</h3>
+                <p>Website E-Commerce</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+    <h2>Message Us</h2>
+
+    <div class="contact-wrapper">
+
+        <!-- FORM -->
+        <form id="messageForm" class="contact-form">
+            <label>Nama</label>
+            <input type="text" id="nama" placeholder="Nama" required>
+
+            <label>Tanggal Lahir</label>
+            <input type="date" id="tanggal" required>
+
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+                <input type="radio" name="jk" value="Laki-Laki" required> Laki-Laki
+                <input type="radio" name="jk" value="Perempuan"> Perempuan
+            </div>
+
+            <label>Pesan</label>
+            <textarea id="pesan" placeholder="Pesan" required></textarea>
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+
+        <!-- OUTPUT -->
+        <div class="output-box" id="outputBox" style="display:none;">
+            <p><strong>Current time :</strong> <span id="currentTime"></span></p>
+            <p><strong>Nama :</strong> <span id="outNama"></span></p>
+            <p><strong>Tanggal Lahir :</strong> <span id="outTanggal"></span></p>
+            <p><strong>Jenis Kelamin :</strong> <span id="outJK"></span></p>
+            <p><strong>Pesan :</strong> <span id="outPesan"></span></p>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <footer>
+        <p>© 2026 MyPortfolio. All Rights Reserved.</p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
